@@ -6,21 +6,22 @@ body, html{
 }
 
 .all-cards{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    height:55%
+    display:grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 0.5rem;
+    margin-left: 2%;
 }
 
 
 .card{
     flex: 1 0 auto;
-    width: 160px;
+    width: 90%;
     height: 100%;
     word-wrap: break-word;
     border: 1px solid #CDCDCD;
     box-shadow: 5px 5px 7px #CDCDCD;
-    margin: 1%;
+    margin-top: 5%;
 }
 
 
@@ -42,4 +43,11 @@ button{
     height: 2.5rem;
     border: 0px;
     margin: 5%;
+}
+
+@media screen and (max-width: 640px){
+    .all-cards{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 1fr);
+    }
 }
